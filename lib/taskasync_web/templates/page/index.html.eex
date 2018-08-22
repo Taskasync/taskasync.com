@@ -1,35 +1,38 @@
-<section class="phx-hero">
-  <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
-  <p>A productive web framework that<br/>does not compromise speed and maintainability.</p>
-</section>
-
-<section class="row">
-  <article class="column">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.4/CHANGELOG.md">v1.4 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-    </ul>
-  </article>
-</section>
+<div class="row mt-3">
+  <div class="col">
+    <div class="card">
+      <h5 class="card-header">Welcome to Task.async</h5>
+      <div class="card-body">
+        <p class="card-text">Task.async provides a central resource to find tasks that need doing in various open source Elixir projects.</p>
+        <h3>Contributors</h3>
+        <p class="card-text">Browse the list of tasks and find one that sounds interesting.  Claim it for yourself and get to work.</p>
+        <h3>Project Maintainers</h3>
+        <p class="card-text">Add your tasks to the site to reach developers who might be able to take some of the load off your shoulders.  Make sure you tag the tasks with approximate complexity level and time commitment to get the best results</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <h5 class="card-header">Task Queue</h5>
+      <div class="card-body">
+        <%= if @tasks == [] do %>
+          <h2>No Tasks Found</h2>
+          <%= link "Add Task", to: Routes.task_path(@conn, :new), class: "btn btn-primary" %>
+        <% else %>
+          <h5 class="card-title">Pick a task below and get started!</h5>
+          <%= for t <- @tasks do %>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
