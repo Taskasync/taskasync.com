@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col text-center mt-3">
+    <h2>Add a new task</h2>
+  </div>
+</div>
+<%= form_for @changeset, Routes.task_path(@conn, :create), fn f -> %>
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group">
+        <%= label f, :project_name, class: "form-label" %>
+        <%= text_input f, :project_name, class: "form-control" %>
+        <%= error_tag f, :project_name %>
+      </div>
+      <div class="form-group">
+        <%= label f, :project_url, class: "form-label" %>
+        <%= text_input f, :project_url, class: "form-control" %>
+        <%= error_tag f, :project_url %>
+      </div>
+      <div class="form-group">
+        <%= label f, :issue_url, "Issue url(optional)", class: "form-label" %>
+        <%= text_input f, :issue_url, class: "form-control" %>
+        <%= error_tag f, :issue_url %>
+      </div>
+      <div class="form-group">
+        <%= label f, :skill_level, class: "form-label" %>
+        <%= select f, :skill_level, [{"Beginner", "BEGINNER"},{"Intermediate", "INTERMEDIATE"},{"Expert", "EXPERT"},{"No Programming Required", "NO_PROG"}], class: "form-control" %>
+        <%= error_tag f, :skill_level %>
+      </div>
+      <div class="form-group">
+        <%= label f, :task_size, "Task size estimate", class: "form-label" %>
+        <%= select f, :task_size, [{"Tiny(<1 hr)", "TINY"},{"Small(<6 hrs)","SMALL"},{"Medium(1-2 days)","MEDIUM"},{"Large(>2 days)","LARGE"}], class: "form-control" %>
+        <%= error_tag f, :task_size %>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group">
+        <%= label f, :title, class: "form-label" %>
+        <%= text_input f, :title, class: "form-control" %>
+        <%= error_tag f, :title %>
+      </div>
+      <div class="form-group">
+        <%= label f, :description, class: "form-label" %>
+        <%= textarea f, :description, rows: 10, class: "form-control" %>
+        <%= error_tag f, :description %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create Task</button>
+      </div>
+    </div>
+  </div>
+<% end %>

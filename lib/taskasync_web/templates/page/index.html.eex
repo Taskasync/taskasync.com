@@ -4,13 +4,21 @@
       <h5 class="card-header">Welcome to Task.async</h5>
       <div class="card-body">
         <p class="card-text">Task.async provides a central resource to find tasks that need doing in various open source Elixir projects.</p>
-        <h3>Contributors</h3>
-        <p class="card-text">Browse the list of tasks and find one that sounds interesting.  Claim it for yourself and get to work.</p>
-        <h3>Project Maintainers</h3>
-        <p class="card-text">Add your tasks to the site to reach developers who might be able to take some of the load off your shoulders.  Make sure you tag the tasks with approximate complexity level and time commitment to get the best results</p>
+        <div class="row">
+          <div class="col">
+            <h3>Contributors</h3>
+            <p class="card-text">Browse the list of tasks and find one that sounds interesting.  Claim it for yourself and get to work.</p>
+          </div>
+          <div class="col">
+            <h3>Project Maintainers</h3>
+            <p class="card-text">Add your tasks to the site to reach developers who might be able to take some of the load off your shoulders.  Make sure you tag the tasks with approximate complexity level and time commitment to get the best results</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
+<div class="row mt-3">
   <div class="col">
     <div class="card">
       <h5 class="card-header">Task Queue</h5>

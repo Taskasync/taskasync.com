@@ -12,6 +12,8 @@ defmodule Taskasync.Tasks.Task do
     field :title, :string
     field :creator_id, :id
     field :worker_id, :id
+    field :task_size, :string
+    field :skill_level, :string
 
     timestamps()
   end
@@ -19,7 +21,7 @@ defmodule Taskasync.Tasks.Task do
   @doc false
   def changeset(task, attrs) do
     task
-    |> cast(attrs, [:title, :description, :project_name, :project_url, :issue_url, :status])
-    |> validate_required([:title, :description, :project_name, :project_url, :issue_url, :status])
+    |> cast(attrs, [:title, :description, :project_name, :project_url, :issue_url, :status, :task_size, :skill_level])
+    |> validate_required([:title, :description, :project_name, :project_url, :task_size, :skill_level])
   end
 end

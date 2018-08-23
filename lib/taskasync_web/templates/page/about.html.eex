@@ -7,7 +7,7 @@
     <div class="card">
       <h5 class="card-header">About Task.async</h5>
       <div class="card-body">
-        <p class="card-text">Task.async was created after seeing <a href="https://twitter.com/doomspork/status/1031989573482508290">This Tweet</a> by Sean Callan.  Unfortunately in my excitement to get started I didn't see that Elixirschool had already built out something similar in the past.  I'll continue hacking on this one though for a bit.  Source code can be found at <a href="https://github.com/shawnonthenet/taskasync.com">https://github.com/shawnonthenet/taskasync.com</a></p>
+        <p class="card-text">Task.async is opensource so if you want to see a new feature added feel free to get involved <a href="https://github.com/taskasync/taskasync.com">Here</a></p>
       </div>
     </div>
   </div>

@@ -9,6 +9,8 @@ defmodule Taskasync.Repo.Migrations.CreateTasks do
       add :project_url, :string
       add :issue_url, :string
       add :status, :string, default: "UNASSIGNED"
+      add :skill_level, :string
+      add :task_size, :string
       add :creator_id, references(:users, on_delete: :nothing)
       add :worker_id, references(:users, on_delete: :nothing)
 
